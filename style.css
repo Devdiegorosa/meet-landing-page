@@ -21,19 +21,23 @@
 body {
   background-color: var(--White);
   overflow-x: hidden;
+  font-family: "Red Hat Display", sans-serif;
 }
 
 header {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 4.75rem;
+  padding: 1rem 0; /* Use padding for vertical spacing, adapts to content */
   width: 100%;
+  /* height removed to allow content-driven height */
 }
 
 img.logo {
-  margin-top: 3rem;
-  width: 7.375rem;
+  display: block; /* Removes inline spacing issues */
+  max-width: 100%; /* Scales image responsively */
+  height: auto;    /* Maintains aspect ratio */
+  margin-top: 1.5rem; /* Smaller, relative margin for better flow */
 }
 
 section.hero {
@@ -60,7 +64,7 @@ img.combined-image {
 }
 
 div.text-hero {
-  margin-top: 3rem;
+margin-block-start: 3rem;
 }
 
 h1 {
@@ -68,7 +72,6 @@ h1 {
   line-height: 110%;
   letter-spacing: 0;
   text-align: center;
-  font-family: "Red Hat Display", sans-serif;
   font-size: 3rem;
   font-weight: 900;
 }
@@ -78,7 +81,6 @@ p {
   margin: 1.5rem 0;
   line-height: 1.4rem;
   text-align: center;
-  font-family: "Red Hat Display", sans-serif;
   font-size: 1rem;
 }
 
@@ -91,15 +93,15 @@ div.button-hero {
 }
 
 .btn-one {
-  height: 3.5rem;
-  width: 12.063rem;
-  font-family: "Red Hat Display", sans-serif;
+  padding: 0.75rem 2rem;   /* Vertical and horizontal padding for flexible sizing */
   font-size: 1rem;
   font-weight: 800;
   background-color: var(--Cyan-600);
   color: var(--White);
   border-radius: 1.8rem;
   border: none;
+  max-width: 100%;         /* Prevents overflow in smaller containers */
+  box-sizing: border-box;  /* Includes padding in size calculations */
 }
 
 .btn-one .version {
@@ -109,7 +111,6 @@ div.button-hero {
 .btn-two {
   height: 3.5rem;
   width: 10.063rem;
-  font-family: "Red Hat Display", sans-serif;
   font-size: 1rem;
   font-weight: 800;
   background-color: var(--Purple-600);
@@ -143,13 +144,12 @@ div.button-hero {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: "Red Hat Display", sans-serif;
   font-size: 1rem;
   font-weight: bold;
   color: var(--Slate-600);
 }
 
-article.content {
+section.content {
   margin: 2rem 2rem 4rem 2rem;
 }
 
@@ -160,6 +160,16 @@ div.collage {
   grid-template-columns: repeat(2, auto);
   grid-template-rows: repeat(2, auto);
   gap: 0.875rem;
+  /* No fixed height; container height adapts naturally */
+}
+
+/* Example of performant animation on child items */
+div.collage > img {
+  transition: transform 0.3s ease; /* Animating transform is GPU-accelerated */
+}
+
+div.collage > img:hover {
+  transform: scale(1.05); /* Smooth, performant hover effect */
 }
 
 div.collage > img {
@@ -190,7 +200,6 @@ span.text {
   line-height: 110%;
   letter-spacing: 0.25rem;
   text-align: center;
-  font-family: "Red Hat Display", sans-serif;
   font-size: 0.75rem;
   font-weight: 700;
 }
@@ -199,7 +208,6 @@ h2 {
   color: var(--Slate-900);
   line-height: 110%;
   text-align: center;
-  font-family: "Red Hat Display", sans-serif;
   font-size: 2rem;
   font-weight: 800;
 }
@@ -244,7 +252,6 @@ button.btn-footer {
   margin: 0 auto;
   height: 3.5rem;
   width: 12.063rem;
-  font-family: "Red Hat Display", sans-serif;
   font-size: 1rem;
   font-weight: 800;
   background-color: var(--Purple-600);
@@ -284,7 +291,7 @@ button.btn-footer {
     flex-direction: row;
   }
 
-  article.content {
+  section.content {
     margin-top: 3.5rem;
   }
 
@@ -355,7 +362,7 @@ button.btn-footer {
     align-self: flex-end;
   }
 
-  article.content {
+  section.content {
     margin: 4.5rem auto;
     max-width: 70rem;
   }
