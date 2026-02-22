@@ -155,7 +155,8 @@ article.content {
 }
 
 div.collage {
-  margin: 4rem 0;
+  margin: 4rem auto;
+  max-width: 19.438rem;
   display: grid;
   grid-template-columns: repeat(2, auto);
   grid-template-rows: repeat(2, auto);
@@ -289,6 +290,8 @@ button.btn-footer {
   }
 
   div.collage {
+    margin: 4rem auto;
+    max-width: 42.5rem;
     display: flex;
     height: 10rem;
     justify-content: space-between;
@@ -370,6 +373,7 @@ button.btn-footer {
 
   div.collage {
     display: flex;
+    max-width: 70rem;
     height: 16rem;
     justify-content: space-between;
   }
