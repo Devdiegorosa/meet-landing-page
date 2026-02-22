@@ -389,7 +389,25 @@ button.btn-footer {
   }
 
   div.content-footer {
-    margin: 4rem auto;
-    max-width: 31.5rem;
+    display: flex;
+    margin: 7rem auto;
+    height: 5.5rem;
+    width: 70rem;
+    justify-content: space-between;
+  }
+
+  div.content-footer h2 {
+    width: 18.063rem;
+    text-align: left;
+  }
+
+  div.content-footer p {
+    margin: 0;
+    width: 20rem;
+    text-align: left;
+  }
+
+  button.btn-footer {
+    margin: 0;
   }
 }
