@@ -40,7 +40,7 @@ section.hero {
   overflow-x: hidden;
 }
 
-article.combined {
+section.combined {
   margin: 4rem 2rem 2rem 2rem;
 }
 
@@ -208,7 +208,7 @@ div.text-content p {
   margin-bottom: 0;
 }
 
-section.footer {
+div.footer {
   margin-top: -1.75rem;
   position: relative;
   background-image: url(assets/mobile/image-footer.jpg);
@@ -259,7 +259,7 @@ button.btn-footer {
 }
 
 @media screen and (min-width: 48rem) {
-  article.combined {
+  section.combined {
     margin: 4rem 2rem;
   }
 
@@ -325,13 +325,13 @@ button.btn-footer {
     width: 31.5rem;
   }
 
-  section.footer {
+  div.footer {
     height: 20rem;
   }
 }
 
 @media screen and (min-width: 90rem) {
-  article.combined {
+  section.combined {
     display: flex;
     margin: 4rem 0;
     justify-content: center;
