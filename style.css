@@ -80,7 +80,6 @@ p {
   text-align: center;
   font-family: "Red Hat Display", sans-serif;
   font-size: 1rem;
-  text-align: center;
 }
 
 div.button-hero {
@@ -129,7 +128,7 @@ div.button-hero {
 }
 
 .line {
-  width: 2px;
+  width: 0.125rem;
   height: 5rem;
   background-color: var(--Slate-300);
 }
@@ -137,7 +136,7 @@ div.button-hero {
 .circle {
   width: 3.5rem;
   height: 3.5rem;
-  border: 2px solid var(--Slate-300);
+  border: 0.125rem solid var(--Slate-300);
   background-color: var(--White);
   border-radius: 50%;
 
@@ -259,7 +258,7 @@ button.btn-footer {
   color: var(--Purple-300);
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48rem) {
   article.combined {
     margin: 4rem 2rem;
   }
@@ -331,7 +330,7 @@ button.btn-footer {
   }
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 90rem) {
   article.combined {
     display: flex;
     margin: 4rem 0;
